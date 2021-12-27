@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row ">
+        <div class="p-4 p-md-5 mb-4 text-success rounded bg-dark container">
+            <div class="col-md-6 px-0 ">
+                <h1 class="display-7 fst-italic">Protejamos el planeta</h1>
+            </div>
+        </div>
+    </div>
+
+
+    {% if posts %}
+        <div class="row ">
+            {% for post in posts %}
+                <div class="col-md-6">
+                    <div class="row g-0  overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative container2">
+                        <div class="col p-4 d-flex flex-column position-static container">
+                            <strong class="d-inline-block mb-2 text-primary">Post</strong>
+                            <h3 class="mb-0">{{post.titulo}}</h3>
+                            <div class="mb-1 text-muted">{{post.fecha_creacion}}</div>
+                            <p class="card-text mb-auto">{{post.contenido}}</p>
+                            <a href="{% url 'detalle' post.id %}" class="stretched-link">Detalle</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %} 
+        </div>
+
+    {% else %}
+        <div class="alert alert-danger" role="alert">
+            No hay posts
+        </div>
+    {% endif %} 
+{% endblock %}
+

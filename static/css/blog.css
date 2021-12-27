@@ -1,0 +1,71 @@
+body {
+  background-image: url(https://incp.org.co/wp-content/uploads/2019/02/medio-ambiente-800x445.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+main .home {
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-content: flex-end;
+  font-style: italic;
+}
+
+main .container3 {
+  display: flex;
+  background-color: hsl(118, 23%, 57%);
+  opacity: 0.9;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: center;
+}
+
+body .container {
+  background-color: hsl(118, 23%, 57%);
+  opacity: 0.9;
+}
+
+body .container2:hover {
+  transform: scale(0.9);
+}
+
+header .titulo {
+  font-size: 40px;
+  color: rgb(151, 38, 38);
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 800;
+  font-style: oblique;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+

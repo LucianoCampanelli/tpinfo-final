@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="col d-flex justify-content-center align-items-center ">
+	<form method="post" class="col-8" novalidate>
+		{% csrf_token %}
+
+		<div class="row">
+			<div class="col-6">
+				{{form.titulo|as_crispy_field}}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-6">
+				{{form.contenido|as_crispy_field}}
+			</div>
+		</div><br>
+
+        <input type="submit" class="btn btn-lg btn-primary" value="Modificar">
+        <a class="btn btn-lg btn-primary" href="{% url 'detalle' object.id %}" role="button">Cancelar</a>
+	</form>
+
+</div>
+{% endblock %}
